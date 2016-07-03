@@ -7,24 +7,31 @@
 <body>
 
 	<form name="myform">
-		Name:<input type="text" name="names" required />
+		Name:<input type="text" name="names" id="names" required />
 		lastname:<input type="text" name="lastname"  />
 		Address:<input type="text" name="address"  />
 		<input type="submit" value="submission" onclick="checkvalue();"><br>
-		<input type="checkbox" lable="is same" name="chec"><br><br><br><br>
+		<input type="checkbox" lable="is same" name="chec" id="xyz" onchange="checkvalue()"><br><br><br><br>
 	</form>
 	<form name="myform1">
-		Name:<input type="text" name="namess"  />
+		Name:<input type="text" name="namess" id="namess />
 		lastname:<input type="text" name="lastnames"  />
 		Address:<input type="text" name="addresss"  />
 	</form><br>
     </body>
 	<script type="text/javascript">
 	function checkvalue()
-	{
+	{  
+	   if(document.getElementById('xyz').checked){
 		var x=document.myform.names.value;
 		//document.getElementById("demo").innerHTML=x;
 		document.myform1.namess.value=x;
+	}
+	else{
+	//var x=document.getElementById('names');
+		//document.getElementById('namess').removeAttribute('value');
+	document.myform1.namess.value="";
+	}
 	}
 	
 	</script>
