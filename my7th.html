@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>7th</title>
+</head>
+<body>
+
+	<form name="myform">
+		Name:<input type="text" name="names" required />
+		lastname:<input type="text" name="lastname"  />
+		Address:<input type="text" name="address"  />
+		<input type="submit" value="submission" onclick="checkvalue();"><br>
+		<input type="checkbox" lable="is same" name="chec"><br><br><br><br>
+	</form>
+	<form name="myform1">
+		Name:<input type="text" name="namess"  />
+		lastname:<input type="text" name="lastnames"  />
+		Address:<input type="text" name="addresss"  />
+	</form><br>
+    </body>
+	<script type="text/javascript">
+	function checkvalue()
+	{
+		var x=document.myform.names.value;
+		//document.getElementById("demo").innerHTML=x;
+		document.myform1.namess.value=x;
+	}
+	
+	</script>
+
+</body>
+</html>
