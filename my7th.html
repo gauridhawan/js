@@ -14,7 +14,7 @@
 		<input type="checkbox" lable="is same" name="chec" id="xyz" onchange="checkvalue()"><br><br><br><br>
 	</form>
 	<form name="myform1">
-		Name:<input type="text" name="namess" id="namess />
+		Name:<input type="text" name="namess" id="namess" />
 		lastname:<input type="text" name="lastnames"  />
 		Address:<input type="text" name="addresss"  />
 	</form><br>
@@ -23,14 +23,18 @@
 	function checkvalue()
 	{  
 	   if(document.getElementById('xyz').checked){
-		var x=document.myform.names.value;
+		//var x=document.myform.names.value;
 		//document.getElementById("demo").innerHTML=x;
-		document.myform1.namess.value=x;
+		//document.myform1.namess.value=x;
+	var name=document.getElementById('names');
+		document.getElementById('namess').setAttribute('value',name.value);
+	
 	}
 	else{
 	//var x=document.getElementById('names');
-		//document.getElementById('namess').removeAttribute('value');
-	document.myform1.namess.value="";
+		document.getElementById('namess').removeAttribute('value');
+		//console.log(document.myform1.namess.value);
+	//document.myform1.namess.value="";
 	}
 	}
 	
